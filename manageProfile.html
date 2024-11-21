@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tjänst för att välja företag inför däckbyte"
+    />
+    <meta name="keywords" content="Däck, Verkstad, Byta, Portal" />
+    <meta
+      name="author"
+      content="Teo Nilsson, Leo Korpi, Elliot Sotterman, Rebecka Frick, Joakim Mård"
+    />
+    <title>Mina Sidor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <div>
+            <img
+              src="img/Verkstadsportalen 1.png"
+              alt="Logga för verkstadsportalen"
+            />
+          </div>
+          <h1>VERKSTADSPORTALEN</h1>
+        </div>
+        <div class="navbar-search">
+          <form action="" class="search-field-lk">
+            <input
+              type="text"
+              id="searchBar"
+              name="searchBar"
+              placeholder="Sök..."
+            />
+            <img src="img/searchlogo.png" alt="en ikon för att söka" />
+          </form>
+        </div>
+        <div class="navbar-login">
+          <h2>
+            <a href="avboka.html">Avboka</a>
+          </h2>
+          <button class="open-login btn" id="log-in" type="button">
+            <img src="img/personlogo.png" alt="Logo för person" />
+            LOGGA IN
+          </button>
+          <figure>
+            <button aria-label="hamburgermeny" id="hamburger-menu-wrap">
+              <div id="hb-meny">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <ul class="hb-links">
+                <li><a href="#">Mina sidor</a></li>
+                <li><a href="#">Avboka tid</a></li>
+                <li><a href="#">Anslut ditt företag</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Logga ut</a></li>
+              </ul>
+            </button>
+          </figure>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="manage-profile-container-tn">
+        <form action="" class="account-settings-form-tn">
+          <div class="input-form-title-tn">
+            <h2>Konto inställningar</h2>
+          </div>
+          <label for="name">Namn</label>
+          <div class="input-field-tn">
+            <img src="img/manageProfile/namnIkon.png" alt="" />
+            <input type="text" name="name" id="name" />
+          </div>
+          <label for="email">E-post adress</label>
+          <div class="input-field-tn">
+            <img src="img/manageProfile/emailIkon.png" alt="" />
+            <input type="email" name="email" id="email" />
+          </div>
+          <label for="phone-number">Mobilnummer</label>
+          <div class="input-field-tn">
+            <img src="img/manageProfile/telefonIkon.png" alt="" />
+            <input
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              pattern="[0-9]{10}"
+            />
+          </div>
+          <label for="address">Adress</label>
+          <div class="input-field-tn">
+            <img src="img/manageProfile/adressikon.png" alt="" />
+            <input type="text" name="address" id="address" />
+          </div>
+          <label for="address-2">Adress 2</label>
+          <div class="input-field-tn">
+            <img src="img/manageProfile/adressikon.png" alt="" />
+            <input type="text" name="address-2" id="address-2" />
+          </div>
+          <div class="form-section-adress-tn">
+            <div class="adress-tn">
+              <label for="post-number">Postnummer</label>
+              <input
+                type="text"
+                name="post-number"
+                id="post-number"
+                pattern="\d+"
+                maxlength="5"
+              />
+            </div>
+            <div class="adress-tn">
+              <label for="city">Ort</label>
+              <input type="text" name="city" id="city" />
+            </div>
+          </div>
+          <label for="current-pass">Nuvarande lösenord</label>
+          <div class="input-field-tn">
+            <img src="img/manageProfile/lockIkon.png" alt="" />
+            <input type="password" name="current-pass" id="current-pass" />
+          </div>
+          <label for="old-pass">Nytt lösenord</label>
+          <div class="input-field-tn">
+            <img src="img/manageProfile/lockIkon.png" alt="" />
+            <input type="password" name="old-pass" id="old-pass" />
+          </div>
+          <label for="old-pass-rep">Upprepa nytt lösenord</label>
+          <div class="input-field-tn">
+            <img src="img/manageProfile/lockIkon.png" alt="" />
+            <input type="password" name="old-pass-rep" id="old-pass-rep" />
+          </div>
+          <div class="form-button-tn">
+            <button class="account-settings-form-button-tn btn" type="button">
+              SPARA
+            </button>
+            <a href="">Radera konto och all sparad data</a>
+          </div>
+        </form>
+        <div class="bookings-container-tn">
+          <h2>Tidigare bokningar</h2>
+          <div class="bookings-box-tn">
+            <div class="booking-info-tn">
+              <h4>Mickes däck och meck</h4>
+              <p>Däckbyte + förvaring</p>
+              <p>Pris: 900kr</p>
+              <p class="booking-date-tn">Datum: 12/04 - 24</p>
+            </div>
+            <div class="booking-info-tn">
+              <h4>Mickes däck och meck</h4>
+              <p>Däckbyte + förvaring</p>
+              <p>Pris: 850kr</p>
+              <p class="booking-date-tn">Datum: 12/11 - 23</p>
+            </div>
+            <div class="booking-info-tn">
+              <h4>Mickes däck och meck</h4>
+              <p>Däckbyte + förvaring</p>
+              <p>Pris: 850kr</p>
+              <p class="booking-date-tn">Datum: 12/04 - 23</p>
+            </div>
+            <div class="booking-info-tn">
+              <h4>Mickes däck och meck</h4>
+              <p>Däckbyte + förvaring</p>
+              <p>Pris: 800kr</p>
+              <p class="booking-date-tn">Datum: 12/11 - 22</p>
+            </div>
+            <div class="booking-info-tn">
+              <h4>Mickes däck och meck</h4>
+              <p>Däckbyte + förvaring</p>
+              <p>Pris: 800kr</p>
+              <p class="booking-date-tn">Datum: 12/04 - 22</p>
+            </div>
+          </div>
+        </div>
+        <div class="bookings-container-tn">
+          <h2>Aktuella bokningar</h2>
+          <div class="bookings-box-tn">
+            <div class="booking-info-tn">
+              <h4>Mickes däck och meck</h4>
+              <p>Däckbyte + förvaring</p>
+              <p>Pris: 900kr</p>
+              <p class="booking-date-tn">Datum: 12/11 - 24</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a><b>FAQ</b></a>
+          <a><b>Villkor</b></a>
+          <a href="om-oss.html"><b>Om oss</b></a>
+          <a href="manageProfile.html"><b>Mina sidor</b></a>
+          <a><b>Logga in</b></a>
+        </div>
+        <div class="footer-support">
+          <p><b>Kontakta Support</b></p>
+          <p><b>support@verkstadsportalen.se</b></p>
+          <p><b>010-10 10 420</b></p>
+          <p>Vardagar 09.00 - 12.00</p>
+          <p>Lunchstängt 11.00 - 11.30</p>
+        </div>
+        <div class="footer-socials">
+          <a class="fb-icon">
+            <img src="img/facebook.png" alt="facebook-icon" />
+          </a>
+          <a class="ig-icon">
+            <img src="img/instagram.png" alt="instagram-icon" />
+          </a>
+          <a class="x-icon">
+            <img src="img/x.png" alt="x-icon" />
+          </a>
+        </div>
+        <div class="footer-connect">
+          <h3>Nå ut till flera kunder!</h3>
+          <button class="connect-btn btn btn-white" type="button">
+            Anslut ditt företag
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

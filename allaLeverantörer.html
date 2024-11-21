@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tjänst för att välja företag inför däckbyte"
+    />
+    <meta name="keywords" content="Däck, Verkstad, Byta, Portal" />
+    <meta
+      name="author"
+      content="Teo Nilsson, Leo Korpi, Elliot Sotterman, Rebecka Frick, Joakim Mård"
+    />
+    <title>Steg 1, välj företag</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <div>
+            <img
+              src="img/Verkstadsportalen 1.png"
+              alt="Logga för verkstadsportalen"
+            />
+          </div>
+          <h1>VERKSTADSPORTALEN</h1>
+        </div>
+        <div class="navbar-search">
+          <form action="" class="search-field-lk">
+            <input
+              type="text"
+              id="searchBar"
+              name="searchBar"
+              placeholder="Sök..."
+            />
+            <img src="img/searchlogo.png" alt="en ikon för att söka" />
+          </form>
+        </div>
+        <div class="navbar-login">
+          <h2>
+            <a href="avboka.html">Avboka</a>
+          </h2>
+          <button class="open-login btn" id="log-in" type="button">
+            <img src="img/personlogo.png" alt="Logo för person" />
+            LOGGA IN
+          </button>
+          <figure>
+            <button aria-label="hamburgermeny" id="hamburger-menu-wrap">
+              <div id="hb-meny">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <ul class="hb-links">
+                <li><a href="#">Mina sidor</a></li>
+                <li><a href="#">Avboka tid</a></li>
+                <li><a href="#">Anslut ditt företag</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Logga ut</a></li>
+              </ul>
+            </button>
+          </figure>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="where-in-img-container">
+        <div class="payment-page-top-bar">
+          <div class="top-part">
+            <p>1.</p>
+            <div class="circle">
+              <span>&#10003;</span>
+            </div>
+            <p>2.</p>
+            <div class="circle">
+              <span></span>
+            </div>
+            <p>3.</p>
+            <div class="circle">
+              <span></span>
+            </div>
+            <p>4.</p>
+            <div class="circle">
+              <span></span>
+            </div>
+            <p>5.</p>
+            <div class="circle"></div>
+          </div>
+          <div class="line"></div>
+          <div class="bottom-part">
+            <p>Välj företag</p>
+            <p>Välj tjänst</p>
+            <p>Välj tid/datum</p>
+            <p>Bokningsuppgifter</p>
+            <p>Betala / Slutför</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-search">
+        <button class="search-button" type="button">
+          <img src="img/bokningssida/icon-search.png" alt="logo" />
+        </button>
+        <input type="text" id="searchInput" placeholder="Sök efter företag" />
+      </div>
+
+      <div class="sorting">
+        <div class="sorting-label">Sortering:</div>
+        <div class="sorting-dropdown">
+          <button class="sorting-button">
+            Närmast mig <span class="arrow">▼</span>
+          </button>
+          <ul class="sorting-options">
+            <li class="sorting-option" data-sort="distance">Närmast mig</li>
+            <li class="sorting-option" data-sort="rating">Högst betyg</li>
+            <li class="sorting-option" data-sort="availability">
+              Första lediga tid
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="number-results">
+        <h3>Visa</h3>
+        <button id="10">10</button>
+        <button id="20">20</button>
+        <button id="30">30</button>
+      </div>
+
+      <div class="seach-item-container">
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/clinic_optimized__optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>DEKKS</h1></div>
+          <div class="search-distance"><p>3 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.00</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/jon_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Hjul!</h1></div>
+          <div class="search-distance"><p>4 km från dig</p></div>
+          <div class="search-btn">
+            <h3><b>LÄS MER</b></h3>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 9.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/kate_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Mekks</h1></div>
+          <div class="search-distance"><p>4.4 km från dig</p></div>
+          <div class="search-btn">
+            <h3><b>LÄS MER</b></h3>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 11.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/bilurklippt_optimized_.webp"
+            alt="Card Image"
+          />
+
+          <div class="search-name"><h1>Däckia</h1></div>
+          <div class="search-distance"><p>5 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/jon_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Firman</h1></div>
+          <div class="search-distance"><p>7 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 15.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/jumpstarter_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Tiresome</h1></div>
+          <div class="search-distance"><p>6 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 11.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/daniel_optimized__optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Mickes</h1></div>
+          <div class="search-distance"><p>8 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 13.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/samuel_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Hjulia</h1></div>
+          <div class="search-distance"><p>13 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 15.00</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/giorgio-trovato-s3OmSrm9qHE-unsplash_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Däck!</h1></div>
+          <div class="search-distance"><p>12 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 12.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/Tires_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Världsdäck</h1></div>
+          <div class="search-distance"><p>11 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.00</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/wolf_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Hjulthema</h1></div>
+          <div class="search-distance"><p>10 km från dig</p></div>
+          <div class="search-btn">
+            <h3><b>LÄS MER</b></h3>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 12.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/clinic_optimized__optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Hjulsson</h1></div>
+          <div class="search-distance"><p>13 km från dig</p></div>
+          <div class="search-btn">
+            <h3><b>LÄS MER</b></h3>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 11.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/maksim_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>DäckDäckDäck</h1></div>
+          <div class="search-distance"><p>14 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 14.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/tekton-e6Wr8LaH-Q8-unsplash_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Namn Firma</h1></div>
+          <div class="search-distance"><p>15 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/giorgio-trovato-s3OmSrm9qHE-unsplash_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>TiresTiresTires</h1></div>
+          <div class="search-distance"><p>19 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b> - </b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/jon_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Mickes mekk</h1></div>
+          <div class="search-distance"><p>17 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 13.15</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/bilurklippt_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Däck4U</h1></div>
+          <div class="search-distance"><p>3 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 15.00</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/tekton-UuO9Jdu2d7E-unsplash_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Pularna</h1></div>
+          <div class="search-distance"><p>19 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/Tires_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Dekkonomen</h1></div>
+          <div class="search-distance"><p>11 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.00</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/kate_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>GodHjul</h1></div>
+          <div class="search-distance"><p>18 km från dig</p></div>
+          <div class="search-btn">
+            <h3><b>LÄS MER</b></h3>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 11.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/snap_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Hjulpularna</h1></div>
+          <div class="search-distance"><p>22 km från dig</p></div>
+          <div class="search-btn">
+            <h3><b>LÄS MER</b></h3>
+            <div class="search-time">Nästa lediga tid <b>kl 11.30</b></div>
+          </div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/snap_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Däck4All</h1></div>
+          <div class="search-distance"><p>23 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/2bilurklippt_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>No Name</h1></div>
+          <div class="search-distance"><p>4 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/maksim_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>StrålandeHjul</h1></div>
+          <div class="search-distance"><p>67 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.30</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/kate_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Torgnys</h1></div>
+          <div class="search-distance"><p>2 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 13.15</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/jumpstarter_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Däckad</h1></div>
+          <div class="search-distance"><p>21 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 15.00</b></div>
+        </div>
+
+        <div class="search-item">
+          <img
+            src="img/allaLeverantörer/tekton-e6Wr8LaH-Q8-unsplash_optimized_.webp"
+            alt="Card Image"
+          />
+          <div class="search-name"><h1>Hjul&Fälg</h1></div>
+          <div class="search-distance"><p>31 km från dig</p></div>
+          <div class="search-btn">
+            <b><h3>LÄS MER</h3></b>
+          </div>
+          <div class="search-time">Nästa lediga tid <b>kl 8.30</b></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a><b>FAQ</b></a>
+          <a><b>Villkor</b></a>
+          <a href="om-oss.html"><b>Om oss</b></a>
+          <a href="manageProfile.html"><b>Mina sidor</b></a>
+          <a><b>Logga in</b></a>
+        </div>
+        <div class="footer-support">
+          <p><b>Kontakta Support</b></p>
+          <p><b>support@verkstadsportalen.se</b></p>
+          <p><b>010-10 10 420</b></p>
+          <p>Vardagar 09.00 - 12.00</p>
+          <p>Lunchstängt 11.00 - 11.30</p>
+        </div>
+        <div class="footer-socials">
+          <a class="fb-icon">
+            <img src="img/facebook.png" alt="facebook-icon" />
+          </a>
+          <a class="ig-icon">
+            <img src="img/instagram.png" alt="instagram-icon" />
+          </a>
+          <a class="x-icon">
+            <img src="img/x.png" alt="x-icon" />
+          </a>
+        </div>
+        <div class="footer-connect">
+          <h3>Nå ut till flera kunder!</h3>
+          <button class="connect-btn btn btn-white" type="button">
+            Anslut ditt företag
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

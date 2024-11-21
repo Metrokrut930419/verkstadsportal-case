@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tjänst för att välja företag inför däckbyte"
+    />
+    <meta name="keywords" content="Däck, Verkstad, Byta, Portal" />
+    <meta
+      name="author"
+      content="Teo Nilsson, Leo Korpi, Elliot Sotterman, Rebecka Frick, Joakim Mård"
+    />
+    <title>Steg 2, Val av tjänst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <div>
+            <img
+              src="img/Verkstadsportalen 1.png"
+              alt="Logga för verkstadsportalen"
+            />
+          </div>
+          <h1>VERKSTADSPORTALEN</h1>
+        </div>
+        <div class="navbar-search">
+          <form action="" class="search-field-lk">
+            <input
+              type="text"
+              id="searchBar"
+              name="searchBar"
+              placeholder="Sök..."
+            />
+            <img src="img/searchlogo.png" alt="en ikon för att söka" />
+          </form>
+        </div>
+        <div class="navbar-login">
+          <h2>
+            <a href="avboka.html">Avboka</a>
+          </h2>
+          <button class="open-login btn" id="log-in" type="button">
+            <img src="img/personlogo.png" alt="Logo för person" />
+            LOGGA IN
+          </button>
+          <figure>
+            <button aria-label="hamburgermeny" id="hamburger-menu-wrap">
+              <div id="hb-meny">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <ul class="hb-links">
+                <li><a href="#">Mina sidor</a></li>
+                <li><a href="#">Avboka tid</a></li>
+                <li><a href="#">Anslut ditt företag</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Logga ut</a></li>
+              </ul>
+            </button>
+          </figure>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="where-in-img-container">
+        <div class="payment-page-top-bar">
+          <div class="top-part">
+            <p>1.</p>
+            <div class="circle">
+              <span>&#10003;</span>
+            </div>
+            <p>2.</p>
+            <div class="circle">
+              <span>&#10003;</span>
+            </div>
+            <p>3.</p>
+            <div class="circle">
+              <span></span>
+            </div>
+            <p>4.</p>
+            <div class="circle">
+              <span></span>
+            </div>
+            <p>5.</p>
+            <div class="circle"></div>
+          </div>
+          <div class="line"></div>
+          <div class="bottom-part">
+            <p>Välj företag</p>
+            <p>Välj tjänst</p>
+            <p>Välj tid/datum</p>
+            <p>Bokningsuppgifter</p>
+            <p>Betala / Slutför</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-card-booking-container">
+        <div class="company-card-booking">
+          <div class="opentimes-container">
+            <aside class="company-info">
+              <h1>Företagsnamn</h1>
+              <br />
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Nostrum vero voluptates itaque voluptas officiis, tempora iste,
+                delectus eius fugiat deleniti, ullam ipsam repellat libero natus
+                quisquam sed temporibus. Ipsam, voluptates!
+              </p>
+              <p>Grönköpingsvägen 18, 123 Grönköping</p>
+              <br />
+              <p>Telefon: 0731 - 234 567</p>
+              <br />
+              <p>E-post: info@foretagsnamn.se</p>
+              <div class="socials-container">
+                <img src="img/facebook.png" alt="fb" />
+                <img src="img/instagram.png" alt="insta" />
+                <img src="img/x.png" alt="X" />
+              </div>
+            </aside>
+
+            <br />
+
+            <div class="opentimes-with-underline-container">
+              <h2>Öppettider</h2>
+              <br />
+              <div class="opendays-with-underline"><p>Mån</p></div>
+              <div class="opentimes-with-underline"><p>9-18.30</p></div>
+              <div class="opendays-with-underline"><p>Tis</p></div>
+              <div class="opentimes-with-underline"><p>9-18.30</p></div>
+              <div class="opendays-with-underline"><p>Ons</p></div>
+              <div class="opentimes-with-underline"><p>9-18.30</p></div>
+              <div class="opendays-with-underline"><p>Tors</p></div>
+              <div class="opentimes-with-underline"><p>9-18.30</p></div>
+              <div class="opendays-with-underline"><p>Fre</p></div>
+              <div class="opentimes-with-underline"><p>9-18.30</p></div>
+              <div class="opendays-with-underline"><p>Lör</p></div>
+              <div class="opentimes-with-underline"><p>9-18.30</p></div>
+              <div class="opendays-with-underline"><p>Sön</p></div>
+              <div class="opentimes-with-underline"><p>9-18.30</p></div>
+            </div>
+            <br />
+            <br />
+
+            <form class="contact-form" action="#" method="post">
+              <h2>Kontakta oss</h2>
+              <div class="contact-form-group">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="contact-form-group">
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="contact-form-group">
+                <label for="message">Meddelande:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Skicka</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-choices-container">
+        <div class="company-hero-container">
+          <div class="company-hero-image">
+            <img src="img/valAvTjänst/background.jpg" alt="company-hero-" />
+          </div>
+          <div class="company-hero-ratings">
+            <img
+              src="./img/stjärna-ifylld.png"
+              alt="en stjärna ifylld för bra betyg"
+            />
+            <img
+              src="./img/stjärna-ifylld.png"
+              alt="en stjärna ifylld för bra betyg"
+            />
+            <img
+              src="./img/stjärna-ifylld.png"
+              alt="en stjärna ifylld för bra betyg"
+            />
+            <img
+              src="./img/stjärna-ifylld.png"
+              alt="en stjärna ifylld för bra betyg"
+            />
+            <img
+              src="./img/stjärna-ifylld.png"
+              alt="en stjärna ifylld för bra betyg"
+            />
+          </div>
+        </div>
+
+        <h1 class="with-underline">Däckverkstad</h1>
+        <div class="tire-person">
+          <h3>Däckbyte - personbil</h3>
+          <img src="img/valAvTjänst/Time.png" alt="timesymbol" />
+          <p>30 min</p>
+          <img src="img/valAvTjänst/Money.png" alt="moneysymbol" />
+          <p>350 sek</p>
+          <button class="pick-time-btn" type="button">Boka</button>
+        </div>
+
+        <div class="tire-person">
+          <h3>Däckbyte - SUV</h3>
+          <img src="img/valAvTjänst/Time.png" alt="timesymbol" />
+          <p>30 min</p>
+          <img src="img/valAvTjänst/Money.png" alt="moneysymbol" />
+          <p>350 sek</p>
+          <button class="pick-time-btn" type="button">Boka</button>
+        </div>
+
+        <div class="tire-person">
+          <h3>Däckhotell</h3>
+          <img src="img/valAvTjänst/Time.png" alt="timesymbol" />
+          <p>30 min</p>
+          <img src="img/valAvTjänst/Money.png" alt="moneysymbol" />
+          <p>350 sek</p>
+          <button class="pick-time-btn" type="button">Boka</button>
+        </div>
+
+        <h1 class="with-underline">Bilverkstad</h1>
+
+        <div class="tire-person">
+          <h3>Service</h3>
+          <img src="img/valAvTjänst/Time.png" alt="timesymbol" />
+          <p>30 min</p>
+          <img src="img/valAvTjänst/Money.png" alt="moneysymbol" />
+          <p>350 sek</p>
+          <button class="pick-time-btn" type="button">Boka</button>
+        </div>
+
+        <div class="tire-person">
+          <h3>Motor</h3>
+          <img src="img/valAvTjänst/Time.png" alt="timesymbol" />
+          <p>30 min</p>
+          <img src="img/valAvTjänst/Money.png" alt="moneysymbol" />
+          <p>350 sek</p>
+          <button class="pick-time-btn" type="button">Boka</button>
+        </div>
+
+        <div class="tire-person">
+          <h3>AC</h3>
+          <img src="img/valAvTjänst/Time.png" alt="timesymbol" />
+          <p>30 min</p>
+          <img src="img/valAvTjänst/Money.png" alt="moneysymbol" />
+          <p>350 sek</p>
+          <button class="pick-time-btn" type="button">Boka</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a><b>FAQ</b></a>
+          <a><b>Villkor</b></a>
+          <a href="om-oss.html"><b>Om oss</b></a>
+          <a href="manageProfile.html"><b>Mina sidor</b></a>
+          <a><b>Logga in</b></a>
+        </div>
+        <div class="footer-support">
+          <p><b>Kontakta Support</b></p>
+          <p><b>support@verkstadsportalen.se</b></p>
+          <p><b>010-10 10 420</b></p>
+          <p>Vardagar 09.00 - 12.00</p>
+          <p>Lunchstängt 11.00 - 11.30</p>
+        </div>
+        <div class="footer-socials">
+          <a class="fb-icon">
+            <img src="img/facebook.png" alt="facebook-icon" />
+          </a>
+          <a class="ig-icon">
+            <img src="img/instagram.png" alt="instagram-icon" />
+          </a>
+          <a class="x-icon">
+            <img src="img/x.png" alt="x-icon" />
+          </a>
+        </div>
+        <div class="footer-connect">
+          <h3>Nå ut till flera kunder!</h3>
+          <button class="connect-btn btn btn-white" type="button">
+            Anslut ditt företag
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

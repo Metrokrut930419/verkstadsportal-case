@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tjänst för att välja företag inför däckbyte"
+    />
+    <meta name="keywords" content="Däck, Verkstad, Byta, Portal" />
+    <meta
+      name="author"
+      content="Teo Nilsson, Leo Korpi, Elliot Sotterman, Rebecka Frick, Joakim Mård"
+    />
+    <title>Klar! Du är nu registrerad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <div>
+            <img
+              src="img/Verkstadsportalen 1.png"
+              alt="Logga för verkstadsportalen"
+            />
+          </div>
+          <h1>VERKSTADSPORTALEN</h1>
+        </div>
+        <div class="navbar-search">
+          <form action="" class="search-field-lk">
+            <input
+              type="text"
+              id="searchBar"
+              name="searchBar"
+              placeholder="Sök..."
+            />
+            <img src="img/searchlogo.png" alt="en ikon för att söka" />
+          </form>
+        </div>
+        <div class="navbar-login">
+          <h2>
+            <a href="avboka.html">Avboka</a>
+          </h2>
+          <button class="open-login btn" id="log-in" type="button">
+            <img src="img/personlogo.png" alt="Logo för person" />
+            LOGGA IN
+          </button>
+          <figure>
+            <button aria-label="hamburgermeny" id="hamburger-menu-wrap">
+              <div id="hb-meny">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <ul class="hb-links">
+                <li><a href="#">Mina sidor</a></li>
+                <li><a href="#">Avboka tid</a></li>
+                <li><a href="#">Anslut ditt företag</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Logga ut</a></li>
+              </ul>
+            </button>
+          </figure>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <section class="welcome-new-user">
+          <div class="new-user-text">
+            <h2>Välkommen!</h2>
+            <p>Tack för att du har registrerat dig hos Verkstadsportalen.</p>
+            <p>
+              Du hittar all din information under
+              <span class="to-my-pages inline-link">Mina sidor</span> som du
+              kommer åt genom att klicka på ditt namn uppe till höger eller
+              längst ner på sidan.
+            </p>
+            <p>
+              Där kan du närsomhelst uppdatera dina preferenser eller radera
+              dina uppgifter. Trevlig bokning!
+            </p>
+          </div>
+          <div class="button-group">
+            <button class="go-home-btn btn-primary-heavy btn" type="button">
+              HEM
+            </button>
+            <button
+              class="to-booking-btn btn-primary-even-heavier btn"
+              type="button"
+            >
+              BOKA NU
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a><b>FAQ</b></a>
+          <a><b>Villkor</b></a>
+          <a href="om-oss.html"><b>Om oss</b></a>
+          <a href="manageProfile.html"><b>Mina sidor</b></a>
+          <a><b>Logga in</b></a>
+        </div>
+        <div class="footer-support">
+          <p><b>Kontakta Support</b></p>
+          <p><b>support@verkstadsportalen.se</b></p>
+          <p><b>010-10 10 420</b></p>
+          <p>Vardagar 09.00 - 12.00</p>
+          <p>Lunchstängt 11.00 - 11.30</p>
+        </div>
+        <div class="footer-socials">
+          <a class="fb-icon">
+            <img src="img/facebook.png" alt="facebook-icon" />
+          </a>
+          <a class="ig-icon">
+            <img src="img/instagram.png" alt="instagram-icon" />
+          </a>
+          <a class="x-icon">
+            <img src="img/x.png" alt="x-icon" />
+          </a>
+        </div>
+        <div class="footer-connect">
+          <h3>Nå ut till flera kunder!</h3>
+          <button class="connect-btn btn btn-white" type="button">
+            Anslut ditt företag
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

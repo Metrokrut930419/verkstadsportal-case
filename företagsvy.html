@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tjänst för att välja företag inför däckbyte"
+    />
+    <meta name="keywords" content="Däck, Verkstad, Byta, Portal" />
+    <meta
+      name="author"
+      content="Teo Nilsson, Leo Korpi, Elliot Sotterman, Rebecka Frick, Joakim Mård"
+    />
+    <title>Verkstadsportalen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <div>
+            <img
+              src="img/Verkstadsportalen 1.png"
+              alt="Logga för verkstadsportalen"
+            />
+          </div>
+          <h1>VERKSTADSPORTALEN</h1>
+        </div>
+        <div class="navbar-search">
+          <form action="" class="search-field-lk">
+            <input
+              type="text"
+              id="searchBar"
+              name="searchBar"
+              placeholder="Sök..."
+            />
+            <img src="img/searchlogo.png" alt="en ikon för att söka" />
+          </form>
+        </div>
+        <div class="navbar-login">
+          <h2>
+            <a href="./avboka.html">Avboka</a>
+          </h2>
+          <button class="open-login btn" id="log-in" type="button">
+            <img src="img/personlogo.png" alt="Logo för person" />
+            LOGGA IN
+          </button>
+          <figure>
+            <button aria-label="hamburgermeny" id="hamburger-menu-wrap">
+              <div id="hb-meny">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <ul class="hb-links">
+                <li><a href="#">Mina sidor</a></li>
+                <li><a href="#">Avboka tid</a></li>
+                <li><a href="#">Anslut ditt företag</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Logga ut</a></li>
+              </ul>
+            </button>
+          </figure>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="business-menu-wrap">
+        <div id="business-menu-container">
+          <a href="#" id="business-menu-calender">Kalender</a>
+          <a href="#" class="business-menu-links">Kunder</a>
+          <a href="#" class="business-menu-links">Inställningar</a>
+        </div>
+        <div class="notifications">
+          <p class="inloggad-företag">[inloggad person]</p>
+          <button id="notification-open-button" aria-label="open notification">
+            <img
+              class="new-messages"
+              src="img/new-message (1).png"
+              alt="Ikon för nytt meddelande"
+            />
+          </button>
+          <dialog id="business-menu-modal">
+            <h3 class="notification-title">Notiser</h3>
+            <div class="notification-list">
+              <div class="notification-wrap-cancellation">
+                <img
+                  src="img/Avbokningsikon.png"
+                  alt="Ikon för notis om avbokning"
+                />
+                <p class="cancellation-notification">Avbokning</p>
+                <img
+                  src="img/notificationspil.png"
+                  alt="Ikon för att öppna notis"
+                  class="notification-arrow"
+                />
+              </div>
+              <div class="notification-wrap-booking">
+                <img
+                  src="img/Nybokningsikon.png"
+                  alt="Ikon för notis om ny bokning"
+                />
+                <p class="booking-notification">Ny bokning</p>
+                <img
+                  src="img/notificationspil.png"
+                  alt="Ikon för att öppna notis"
+                  class="notification-arrow"
+                />
+              </div>
+              <div class="notification-wrap-cancellation">
+                <img
+                  src="img/Avbokningsikon.png"
+                  alt="Ikon för notis om avbokning"
+                />
+                <p class="cancellation-notification">Avbokning</p>
+                <img
+                  src="img/notificationspil.png"
+                  alt="Ikon för att öppna notis"
+                  class="notification-arrow"
+                />
+              </div>
+              <div class="notification-wrap-booking">
+                <img
+                  src="img/Nybokningsikon.png"
+                  alt="Ikon för notis om ny bokning"
+                />
+                <p class="booking-notification">Ny bokning</p>
+                <img
+                  src="img/notificationspil.png"
+                  alt="Ikon för att öppna notis"
+                  class="notification-arrow"
+                />
+              </div>
+              <div class="notification-wrap-message">
+                <img
+                  src="img/nyttmeddelandeikon.png"
+                  alt="Ikon för notis om nytt meddelande"
+                />
+                <p class="message-notification">Nytt meddelande</p>
+                <img
+                  src="img/notificationspil.png"
+                  alt="Ikon för att öppna notis"
+                  class="notification-arrow"
+                />
+              </div>
+              <div class="notification-wrap-booking">
+                <img
+                  src="img/Nybokningsikon.png"
+                  alt="Ikon för notis om ny bokning"
+                />
+                <p class="booking-notification">Ny bokning</p>
+                <img
+                  src="img/notificationspil.png"
+                  alt="Ikon för att öppna notis"
+                  class="notification-arrow"
+                />
+              </div>
+              <div class="notification-wrap-message">
+                <img
+                  src="img/nyttmeddelandeikon.png"
+                  alt="Ikon för notis om nytt meddelande"
+                />
+                <p class="message-notification">Nytt meddelande</p>
+                <img
+                  src="img/notificationspil.png"
+                  alt="Ikon för att öppna notis"
+                  class="notification-arrow"
+                />
+              </div>
+            </div>
+
+            <button
+              id="notification-close-button"
+              aria-label="close notifications"
+            >
+              Stäng
+            </button>
+          </dialog>
+        </div>
+      </section>
+      <div class="schedule-wrapper">
+        <div class="schedule">
+          <div class="weekly-orientation">
+            <img
+              src="img/schemapil L.png"
+              class="weekly-arrow"
+              alt="Pil för att gå till veckan före"
+              title="Pilikon"
+            />
+            <p class="weeknr">Vecka 44</p>
+            <img
+              src="img/schemapil R.png"
+              class="weekly-arrow"
+              alt="Pil för att gå till veckan efter"
+              title="Pilikon"
+            />
+          </div>
+          <div class="logged-in-user"><p>[Inloggad person]</p></div>
+        </div>
+        <div class="switch-schedule">
+          <div class="wrap-current-weekbtn">
+            <button aria-label="Aktuell vecka" id="current-weekbtn">
+              Aktuell vecka
+            </button>
+          </div>
+          <div class="change-view-btns">
+            <button aria-label="Aktuell vecka" id="daybtn">Dag</button>
+            <button aria-label="Aktuell vecka" id="weekbtn">vecka</button>
+            <button aria-label="Aktuell vecka" id="monthbtn">Månad</button>
+          </div>
+        </div>
+      </div>
+      <section class="grid-schedule-wrapper">
+        <div id="grid-schedule-wrapper"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a><b>FAQ</b></a>
+          <a><b>Villkor</b></a>
+          <a href="om-oss.html"><b>Om oss</b></a>
+          <a href="manageProfile.html"><b>Mina sidor</b></a>
+          <a><b>Logga in</b></a>
+        </div>
+        <div class="footer-support">
+          <p><b>Kontakta Support</b></p>
+          <p><b>support@verkstadsportalen.se</b></p>
+          <p><b>010-10 10 420</b></p>
+          <p>Vardagar 09.00 - 12.00</p>
+          <p>Lunchstängt 11.00 - 11.30</p>
+        </div>
+        <div class="footer-socials">
+          <a class="fb-icon">
+            <img src="img/facebook.png" alt="facebook-icon" />
+          </a>
+          <a class="ig-icon">
+            <img src="img/instagram.png" alt="instagram-icon" />
+          </a>
+          <a class="x-icon">
+            <img src="img/x.png" alt="x-icon" />
+          </a>
+        </div>
+        <div class="footer-connect">
+          <h3>Nå ut till flera kunder!</h3>
+          <button class="connect-btn btn btn-white" type="button">
+            Anslut ditt företag
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

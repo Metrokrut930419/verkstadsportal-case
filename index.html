@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tjänst för att välja företag inför däckbyte"
+    />
+    <meta name="keywords" content="Däck, Verkstad, Byta, Portal" />
+    <meta
+      name="author"
+      content="Teo Nilsson, Leo Korpi, Elliot Sotterman, Rebecka Frick, Joakim Mård"
+    />
+    <title>Verkstadsportalen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <div>
+            <img
+              src="img/Verkstadsportalen 1.png"
+              alt="Logga för verkstadsportalen"
+            />
+          </div>
+          <h1>VERKSTADSPORTALEN</h1>
+        </div>
+        <div class="navbar-search">
+          <form action="" class="search-field-lk">
+            <input
+              type="text"
+              id="searchBar"
+              name="searchBar"
+              placeholder="Sök..."
+            />
+            <img src="img/searchlogo.png" alt="en ikon för att söka" />
+          </form>
+        </div>
+        <div class="navbar-login">
+          <h2>
+            <a href="avboka.html">Avboka</a>
+          </h2>
+          <button class="open-login btn" id="log-in" type="button">
+            <img src="img/personlogo.png" alt="Logo för person" />
+            LOGGA IN
+          </button>
+          <figure>
+            <button aria-label="hamburgermeny" id="hamburger-menu-wrap">
+              <div id="hb-meny">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <ul class="hb-links">
+                <li><a href="#">Mina sidor</a></li>
+                <li><a href="#">Avboka tid</a></li>
+                <li><a href="#">Anslut ditt företag</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Logga ut</a></li>
+              </ul>
+            </button>
+          </figure>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <section class="hero">
+          <div class="hero-text">
+            <h2>Säker körning börjar med rätt däck</h2>
+          </div>
+          <button class="to-booking-btn btn" id="hero-btn" type="button">
+            TILL BOKNINGSSIDAN
+          </button>
+        </section>
+        <section class="popular">
+          <h2>Populära företag</h2>
+          <div class="carousel-container-lk">
+            <!-- slider-container -->
+            <div class="company-carousel-lk">
+              <!-- slider -->
+              <div class="carousel-cards-lk">
+                <!-- slides -->
+                <div id="card-1" class="company-card-lk">
+                  <div class="card-image">
+                    <img src="./img/mickesdackomeck.jpg" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <div class="card-text-content">
+                      <h3>Mickes Däck & Meck</h3>
+                      <div class="card-ratings">
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                      </div>
+                      <p>Däckvägen 1, Grönköping</p>
+                      <p>Öppet Vardagar 8 - 20, Stängt Helger</p>
+                      <p>070 365 08 08</p>
+                      <p>
+                        <b>Lediga tider från: </b
+                        ><span class="card-opening-times"></span>
+                      </p>
+                    </div>
+                    <button
+                      class="card-btn btn btn-primary-heavy"
+                      type="button"
+                    >
+                      LÄS MER
+                    </button>
+                  </div>
+                </div>
+                <div id="card-2" class="company-card-lk">
+                  <div class="card-image">
+                    <img src="./img/mickesdackomeck.jpg" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <div class="card-text-content">
+                      <h3>Mickes Däck & Meck</h3>
+                      <div class="card-ratings">
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                      </div>
+                      <p>Däckvägen 1, Grönköping</p>
+                      <p>Öppet Vardagar 8 - 20, Stängt Helger</p>
+                      <p>070 365 08 08</p>
+                      <p>
+                        <b>Lediga tider från: </b
+                        ><span class="card-opening-times"></span>
+                      </p>
+                    </div>
+                    <button
+                      class="card-btn btn btn-primary-heavy"
+                      type="button"
+                    >
+                      LÄS MER
+                    </button>
+                  </div>
+                </div>
+                <div id="card-3" class="company-card-lk">
+                  <div class="card-image">
+                    <img src="./img/mickesdackomeck.jpg" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <div class="card-text-content">
+                      <h3>Mickes Däck & Meck</h3>
+                      <div class="card-ratings">
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                      </div>
+                      <p>Däckvägen 1, Grönköping</p>
+                      <p>Öppet Vardagar 8 - 20, Stängt Helger</p>
+                      <p>070 365 08 08</p>
+                      <p>
+                        <b>Lediga tider från: </b
+                        ><span class="card-opening-times"></span>
+                      </p>
+                    </div>
+                    <button
+                      class="card-btn btn btn-primary-heavy"
+                      type="button"
+                    >
+                      LÄS MER
+                    </button>
+                  </div>
+                </div>
+                <div id="card-4" class="company-card-lk">
+                  <div class="card-image">
+                    <img src="./img/mickesdackomeck.jpg" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <div class="card-text-content">
+                      <h3>Mickes Däck & Meck</h3>
+                      <div class="card-ratings">
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                      </div>
+                      <p>Däckvägen 1, Grönköping</p>
+                      <p>Öppet Vardagar 8 - 20, Stängt Helger</p>
+                      <p>070 365 08 08</p>
+                      <p>
+                        <b>Lediga tider från: </b
+                        ><span class="card-opening-times"></span>
+                      </p>
+                    </div>
+                    <button
+                      class="card-btn btn btn-primary-heavy"
+                      type="button"
+                    >
+                      LÄS MER
+                    </button>
+                  </div>
+                </div>
+                <div id="card-5" class="company-card-lk">
+                  <div class="card-image">
+                    <img src="./img/mickesdackomeck.jpg" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <div class="card-text-content">
+                      <h3>Mickes Däck & Meck</h3>
+                      <div class="card-ratings">
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                        <img
+                          src="./img/stjärna-ifylld.png"
+                          alt="en stjärna ifylld för bra betyg"
+                        />
+                      </div>
+                      <p>Däckvägen 1, Grönköping</p>
+                      <p>Öppet Vardagar 8 - 20, Stängt Helger</p>
+                      <p>070 365 08 08</p>
+                      <p>
+                        <b>Lediga tider från: </b
+                        ><span class="card-opening-times"></span>
+                      </p>
+                    </div>
+                    <button
+                      class="card-btn btn btn-primary-heavy"
+                      type="button"
+                    >
+                      LÄS MER
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-breadcrumbs-lk">
+            <ul>
+              <li href="card-1" class="card-navlink-lk"></li>
+              <li href="card-2" class="card-navlink-lk"></li>
+              <li href="card-3" class="card-navlink-lk"></li>
+              <li href="card-4" class="card-navlink-lk"></li>
+              <li href="card-5" class="card-navlink-lk"></li>
+            </ul>
+          </div>
+          <button
+            class="to-booking-btn btn-primary-even-heavier btn"
+            type="button"
+          >
+            Se alla företag <i><!-- Pil-ikon --></i>
+          </button>
+        </section>
+        <section class="our-system two-piece">
+          <div class="two-piece-text-content">
+            <div class="two-piece-wrapper">
+              <h3>Ett komplett bokningssystem</h3>
+              <p>
+                Skaffa ett nytt bokningssystem via Verkstadsportalen och få upp
+                till 6 månader kostnadsfritt. Vi hjälper dig igång, inga
+                bindningstider, inget krångel!
+              </p>
+              <p>
+                Verkstadsportalen är Grönköpings största marknadsplats för
+                verkstäder. Varje månad förmedlas över 5000 bokningar, där
+                kunder enkelt kan hitta och boka tjänster som däckbyte,
+                förvaring av däck och hjulbalansering. Plattformen förenklar
+                vardagen genom att erbjuda en smidig och trygg upplevelse där de
+                bästa proffsen inom branschen i Grönköping är samlade på ett
+                ställe.
+              </p>
+              <button class="to-contact-us btn btn-primary-heavy" type="button">
+                LÄS MER
+              </button>
+            </div>
+          </div>
+          <div class="two-piece-image">
+            <img src="img/varat bokningssystem.jpg" alt="Bild på dator" />
+          </div>
+        </section>
+        <section class="know-more two-piece">
+          <div class="two-piece-image">
+            <img
+              src="img/villduvetamer.jpg"
+              alt="Bild på två kvinnor som samtalar"
+            />
+          </div>
+          <div class="two-piece-text-content">
+            <div class="two-piece-wrapper">
+              <h3>Prisvärd bokningstjänst online</h3>
+              <p>
+                Fler än 40 småföretag, föreningar och organisationer som delar,
+                säljer, anordnar och hyr ut använder Verkstadsportalen. Liksom
+                flera av Grönköpings mest kända varumärken. Verkstadsportalens
+                mål är nöjda kunder och vi är övertygade om att transparens och
+                schyssta villkor lönar sig i längden. Vi har därför ingen
+                bindningstid. Prova gratis i 30 dagar!
+              </p>
+              <div class="contact-info">
+                <span class="contact-sales">Kontakta försäljning</span>
+                <span class="phone-number"
+                  ><img src="img/telephone.png" alt="Telefonikon" /> 010-10 10
+                  425</span
+                >
+              </div>
+              <button class="to-contact-us btn btn-primary-heavy" type="button">
+                LÄS MER
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a><b>FAQ</b></a>
+          <a><b>Villkor</b></a>
+          <a href="om-oss.html"><b>Om oss</b></a>
+          <a href="manageProfile.html"><b>Mina sidor</b></a>
+          <a><b>Logga in</b></a>
+        </div>
+        <div class="footer-support">
+          <p><b>Kontakta Support</b></p>
+          <p><b>support@verkstadsportalen.se</b></p>
+          <p><b>010-10 10 420</b></p>
+          <p>Vardagar 09.00 - 12.00</p>
+          <p>Lunchstängt 11.00 - 11.30</p>
+        </div>
+        <div class="footer-socials">
+          <a class="fb-icon">
+            <img src="img/facebook.png" alt="facebook-icon" />
+          </a>
+          <a class="ig-icon">
+            <img src="img/instagram.png" alt="instagram-icon" />
+          </a>
+          <a class="x-icon">
+            <img src="img/x.png" alt="x-icon" />
+          </a>
+        </div>
+        <div class="footer-connect">
+          <h3>Nå ut till flera kunder!</h3>
+          <button class="connect-btn btn btn-white" type="button">
+            Anslut ditt företag
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

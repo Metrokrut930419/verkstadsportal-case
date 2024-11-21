@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tjänst för att välja företag inför däckbyte"
+    />
+    <meta name="keywords" content="Däck, Verkstad, Byta, Portal" />
+    <meta
+      name="author"
+      content="Teo Nilsson, Leo Korpi, Elliot Sotterman, Rebecka Frick, Joakim Mård"
+    />
+    <title>Registrera ny användare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <div>
+            <img
+              src="img/Verkstadsportalen 1.png"
+              alt="Logga för verkstadsportalen"
+            />
+          </div>
+          <h1>VERKSTADSPORTALEN</h1>
+        </div>
+        <div class="navbar-search">
+          <form action="" class="search-field-lk">
+            <input
+              type="text"
+              id="searchBar"
+              name="searchBar"
+              placeholder="Sök..."
+            />
+            <img src="img/searchlogo.png" alt="en ikon för att söka" />
+          </form>
+        </div>
+        <div class="navbar-login">
+          <h2>
+            <a href="avboka.html">Avboka</a>
+          </h2>
+          <button class="open-login btn" id="log-in" type="button">
+            <img src="img/personlogo.png" alt="Logo för person" />
+            LOGGA IN
+          </button>
+          <figure>
+            <button aria-label="hamburgermeny" id="hamburger-menu-wrap">
+              <div id="hb-meny">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <ul class="hb-links">
+                <li><a href="#">Mina sidor</a></li>
+                <li><a href="#">Avboka tid</a></li>
+                <li><a href="#">Anslut ditt företag</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Logga ut</a></li>
+              </ul>
+            </button>
+          </figure>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <section class="reg-new-user two-piece">
+          <div class="two-piece-image">
+            <img
+              src="img/register-new-user.png"
+              alt="Bild på två personer som diskuterar ett kontrakt"
+            />
+          </div>
+          <div class="two-piece-text-content">
+            <div class="two-piece-wrapper">
+              <h3>Strax färdig!</h3>
+              <p>
+                Genom att registrera dig kan dina uppgifter sparas för smidigare
+                bokning och påminnelser. Det enda vi behöver nu är lite
+                uppgifter och preferenser.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="form-container">
+          <article class="form-article">
+            <form class="form user-form" id="reg-new-form">
+              <p id="required-fields">* Obligatoriska fält</p>
+              <div class="form-group">
+                <label for="password" class="form-label"
+                  >Välj ett lösenord*</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="********"
+                  required
+                />
+              </div>
+              <div class="form-group" id="social-security-section">
+                <label for="personnummer" class="form-label"
+                  >Personnummer</label
+                >
+                <div class="input-and-btn">
+                  <input
+                    type="text"
+                    id="personnummer"
+                    name="personnummer"
+                    placeholder="ÅÅMMDDXXXX"
+                    maxlength="10"
+                  />
+                  <button
+                    class="get-user-info btn-primary-even-heavier btn-long btn"
+                    id="get-user-info"
+                    type="button"
+                  >
+                    Hämta mina uppgifter
+                  </button>
+                </div>
+                <p id="user-info-self" tabindex="0">
+                  Jag vill fylla i mina uppgifter själv
+                </p>
+              </div>
+              <!--- user-info är dolda per default, blir synliga genom js -->
+              <div class="user-info">
+                <div class="form-group">
+                  <label for="first-name" class="form-label">Förnamn*</label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    placeholder="John"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="last-name" class="form-label">Efternamn*</label>
+                  <input
+                    type="text"
+                    id="last-name"
+                    name="last-name"
+                    placeholder="Doe"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="user-info">
+                <div class="form-group">
+                  <label for="first-address" class="form-label"
+                    >Adress 1*</label
+                  >
+                  <input
+                    type="text"
+                    id="first-address"
+                    name="first-address"
+                    placeholder="Gatgatan 12"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="second-address" class="form-label"
+                    >Adress 2</label
+                  >
+                  <input
+                    type="text"
+                    id="second-address"
+                    name="second-address"
+                    placeholder="Vägvägen 57"
+                  />
+                </div>
+              </div>
+              <div class="user-info">
+                <div class="form-group">
+                  <label for="zip-code" class="form-label">Postnummer*</label>
+                  <input
+                    type="text"
+                    id="zip-code"
+                    name="zip-code"
+                    placeholder="123 45"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="area" class="form-label">Ort*</label>
+                  <input
+                    type="text"
+                    id="area"
+                    name="area"
+                    placeholder="Grönköping"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="reg-nr" class="form-label"
+                  >Registreringsnummer<sup>1</sup>*</label
+                >
+                <input
+                  type="text"
+                  id="reg-nr"
+                  name="reg-nr"
+                  placeholder="AAA123"
+                  required
+                />
+                <p>
+                  <em>
+                    <sup>1</sup>Genom reg.nummret kan vi hämta teknisk
+                    fordonsdata från transportstyrelsen. På så vis vet
+                    verkstäderna dina däckdimensioner innan besöket och kan
+                    förbereda sig.
+                  </em>
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="phone-number" class="form-label"
+                  >Telefonnummer*</label
+                >
+                <input
+                  type="text"
+                  id="phone-number"
+                  name="phone-number"
+                  placeholder="+46XXXXXXXXXX"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <h4>Jag vill ta emot påminnelser inför mina bokade tider:</h4>
+                <div class="checkboxes">
+                  <div class="checkbox-form">
+                    <input
+                      type="checkbox"
+                      name="reminders-by-text"
+                      id="reminders-by-text"
+                    />
+                    <label for="reminders-by-text" class="checkbox-label"
+                      >Via sms</label
+                    >
+                  </div>
+                  <div class="checkbox-form">
+                    <input
+                      type="checkbox"
+                      name="reminders-by-mail"
+                      id="reminders-by-mail"
+                    />
+                    <label for="reminders-by-mail" class="checkbox-label"
+                      >Via e-post</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>
+                  Jag vill ta emot marknadsföring från verkstäder jag har besökt
+                  tidigare:
+                </h4>
+                <div class="checkboxes">
+                  <div class="checkbox-form">
+                    <input
+                      type="checkbox"
+                      name="marketing-by-text"
+                      id="marketing-by-text"
+                    />
+                    <label for="marketing-by-text" class="checkbox-label"
+                      >Via sms</label
+                    >
+                  </div>
+                  <div class="checkbox-form">
+                    <input
+                      type="checkbox"
+                      name="marketing-by-mail"
+                      id="marketing-by-mail"
+                    />
+                    <label for="marketing-by-mail" class="checkbox-label"
+                      >Via e-post</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="button-placement">
+                <button
+                  class="submit-new-user btn-primary-even-heavier btn"
+                  type="submit"
+                  type="button"
+                >
+                  REGISTRERA
+                </button>
+              </div>
+            </form>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a><b>FAQ</b></a>
+          <a><b>Villkor</b></a>
+          <a href="om-oss.html"><b>Om oss</b></a>
+          <a href="manageProfile.html"><b>Mina sidor</b></a>
+          <a><b>Logga in</b></a>
+        </div>
+        <div class="footer-support">
+          <p><b>Kontakta Support</b></p>
+          <p><b>support@verkstadsportalen.se</b></p>
+          <p><b>010-10 10 420</b></p>
+          <p>Vardagar 09.00 - 12.00</p>
+          <p>Lunchstängt 11.00 - 11.30</p>
+        </div>
+        <div class="footer-socials">
+          <a class="fb-icon">
+            <img src="img/facebook.png" alt="facebook-icon" />
+          </a>
+          <a class="ig-icon">
+            <img src="img/instagram.png" alt="instagram-icon" />
+          </a>
+          <a class="x-icon">
+            <img src="img/x.png" alt="x-icon" />
+          </a>
+        </div>
+        <div class="footer-connect">
+          <h3>Nå ut till flera kunder!</h3>
+          <button class="connect-btn btn btn-white">Anslut ditt företag</button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

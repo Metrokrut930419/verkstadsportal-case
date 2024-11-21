@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tjänst för att välja företag inför däckbyte"
+    />
+    <meta name="keywords" content="Däck, Verkstad, Byta, Portal" />
+    <meta
+      name="author"
+      content="Teo Nilsson, Leo Korpi, Elliot Sotterman, Rebecka Frick, Joakim Mård"
+    />
+    <title>Steg 4, Bokningsuppgifter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <div>
+            <img
+              src="img/Verkstadsportalen 1.png"
+              alt="Logga för verkstadsportalen"
+            />
+          </div>
+          <h1>VERKSTADSPORTALEN</h1>
+        </div>
+        <div class="navbar-search">
+          <form action="" class="search-field-lk">
+            <input
+              type="text"
+              id="searchBar"
+              name="searchBar"
+              placeholder="Sök..."
+            />
+            <img src="img/searchlogo.png" alt="en ikon för att söka" />
+          </form>
+        </div>
+        <div class="navbar-login">
+          <h2>
+            <a href="">Avboka</a>
+          </h2>
+          <button class="open-login btn" id="log-in" type="button">
+            <img src="img/personlogo.png" alt="Logo för person" />
+            LOGGA IN
+          </button>
+          <figure>
+            <button aria-label="hamburgermeny" id="hamburger-menu-wrap">
+              <div id="hb-meny">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <ul class="hb-links">
+                <li><a href="#">Mina sidor</a></li>
+                <li><a href="#">Avboka tid</a></li>
+                <li><a href="#">Anslut ditt företag</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Logga ut</a></li>
+              </ul>
+            </button>
+          </figure>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="payment-page-top-bar">
+        <div class="top-part">
+          <p>1.</p>
+          <div class="circle">
+            <span>&#10003;</span>
+          </div>
+          <p>2.</p>
+          <div class="circle">
+            <span>&#10003;</span>
+          </div>
+          <p>3.</p>
+          <div class="circle">
+            <span>&#10003;</span>
+          </div>
+          <p>4.</p>
+          <div class="circle">
+            <span>&#10003;</span>
+          </div>
+          <p>5.</p>
+          <div class="circle"></div>
+        </div>
+        <div class="line"></div>
+        <div class="bottom-part">
+          <p>Välj företag</p>
+          <p>Välj tjänst</p>
+          <p>Välj tid/datum</p>
+          <p>Bokningsuppgifter</p>
+          <p>Betala / Slutför</p>
+        </div>
+      </div>
+      <div class="payment-page-container">
+        <section class="payment-form-container">
+          <div class="payment-form-top-part">
+            <div class="payment-form-input-side">
+              <div class="form-group">
+                <label for="firstName" id="first-name-label">Förnamn</label>
+                <input type="text" id="firstName" />
+              </div>
+              <div class="form-group">
+                <label for="last-name" id="last-name-label">Efternamn</label>
+                <input type="text" id="last-name" />
+              </div>
+            </div>
+            <div class="payment-form-input-side">
+              <div class="form-group">
+                <label for="phone-number" id="phone-number-label"
+                  >Telefonnummer</label
+                >
+                <input type="text" id="phone-number" />
+              </div>
+              <div class="form-group">
+                <label for="email" id="email-label">E-post</label>
+                <input type="text" id="email" />
+              </div>
+            </div>
+          </div>
+          <div class="payment-form-checkbox">
+            <input type="checkbox" id="checkbox-reminder" />
+            <p>Jag vill ha sms-påminnelse</p>
+          </div>
+          <p>Information till företaget:</p>
+          <textarea rows="5" col="40" id="payment-form-userInput"></textarea>
+          <div class="payment-form-coupon">
+            <p>Kampanjkod</p>
+            <input type="text" id="coupon" />
+            <button id="coupon-btn" type="button">SKICKA</button>
+          </div>
+          <div class="payment-form-checkbox">
+            <input type="checkbox" id="checkbox-marketing" />
+            <p>
+              Jag vill ha information och <br />
+              nyhetsbrev från företaget
+            </p>
+          </div>
+          <div class="payment-form-buttons">
+            <button id="return-btn" type="button">TILLBAKA</button>
+            <button id="to-payment-btn" type="button">TILL BETALNING</button>
+          </div>
+          <p class="payment-form-info-text">
+            Genom att bekräfta din bokning ingår du samtidigt avtal med den som
+            utför tjänsten.
+            <br />
+            Verkstadsportalen.se tar således inget ansvar för felaktiga eller
+            uteblivna bokningar eller tjänster.
+            <br />
+            Genom att slutföra din bokning bekräftar du att du har tagit del av
+            och accepterar <br />
+            våra
+            <a href="">villkor och policy</a>
+            för användande av verkstadsportalen.se
+          </p>
+        </section>
+        <div class="info-box">
+          <h3>Däckbyte - personbil</h3>
+          <p>Lördag, 31 december</p>
+          <p>12:00 - 12:30</p>
+          <span>
+            <br />Avbokning sker 1 timme innan <br />
+            <br />Totalt att betala</span
+          >
+          <div class="price-tag">
+            <h3>350,00 SEK</h3>
+            <p>inkl. moms</p>
+          </div>
+          <p>varav moms 0,00 SEK</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a><b>FAQ</b></a>
+          <a><b>Villkor</b></a>
+          <a href="om-oss.html"><b>Om oss</b></a>
+          <a href="manageProfile.html"><b>Mina sidor</b></a>
+          <a><b>Logga in</b></a>
+        </div>
+        <div class="footer-support">
+          <p><b>Kontakta Support</b></p>
+          <p><b>support@verkstadsportalen.se</b></p>
+          <p><b>010-10 10 420</b></p>
+          <p>Vardagar 09.00 - 12.00</p>
+          <p>Lunchstängt 11.00 - 11.30</p>
+        </div>
+        <div class="footer-socials">
+          <a class="fb-icon">
+            <img src="img/facebook.png" alt="facebook-icon" />
+          </a>
+          <a class="ig-icon">
+            <img src="img/instagram.png" alt="instagram-icon" />
+          </a>
+          <a class="x-icon">
+            <img src="img/x.png" alt="x-icon" />
+          </a>
+        </div>
+        <div class="footer-connect">
+          <h3>Nå ut till flera kunder!</h3>
+          <button class="connect-btn btn btn-white" type="button">
+            Anslut ditt företag
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
